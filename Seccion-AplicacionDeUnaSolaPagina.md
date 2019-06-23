@@ -141,7 +141,7 @@ Vamos a instalar Bootstrap de 3 formas diferentes, esto será aplicable a cualqu
         </html>
         ```
 
-2. Descargando las librerías en nuestro proyecto local.
+2. Descargando las librerías Bootstrap en nuestro proyecto local.
 
     * Ir a **getbootstrap.com**
 
@@ -176,6 +176,72 @@ Vamos a instalar Bootstrap de 3 formas diferentes, esto será aplicable a cualqu
             </body>
         </html>
         ```
+
+3. Instalando Bootstrap usando **npm**
+
+    * Eliminamos las librerías copiadas dentro de **assets**
+
+    * Eliminamos de **index.html** la línea:
+
+        `<link rel="stylesheet" href="assets/libs/bootstrap/css/bootstrap.min.css">`
+
+        Para que quede la versión original del archivo.
+
+    * Ir a **getbootstrap.com**
+
+    * Ir a Download
+
+    * Bajar hasta **npm** y copiamos la línea:
+
+        `npm install bootstrap`
+
+    * En el **Git Bash** estando en la carpeta **heroes** ejecutamos el comando que copiamos añadiéndole **--save** para indicar que es una librería que mi proyecto necesita
+
+        `npm install bootstrap --save`
+
+        ```
+        npm WARN bootstrap@4.3.1 requires a peer of jquery@1.9.1 - 3 but none is installed. You must install peer dependencies yourself.
+        npm WARN bootstrap@4.3.1 requires a peer of popper.js@^1.14.7 but none is installed. You must install peer dependencies yourself.
+        npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.2.9 (node_modules\fsevents):
+        npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.9: wanted {"os":"darwin","arch":"any"} (current: {"os":"win32","arch":"x64"})
+
+        + bootstrap@4.3.1
+        added 1 package from 2 contributors and audited 19006 packages in 34.388s
+        found 0 vulnerabilities
+
+        ```
+
+    * Al ejecutar este comando descarga **Bootstrap** y lo incluye en los módulos de node **node_modules**, pero también me dice que debo instalar **jquery** y **popper** ya que tiene dependencias con ellos.
+
+        `npm install jquery --save`
+
+        `npm install popper.js --save`
+
+    * Una vez instaladas las librerías y descargadas en **node_modules** hay que indicarle a Angular que las tiene que utilizar, esto se hace en el archivo **angular.json**, este archivo es un archivo de configuración que describe como arranca la aplicación, que favicon va a usar, donde se encuentran los **assets**, cual es la página de estilos general, entre muchas cosas más.  
+
+    * En **angular.json** vamos a modificar los **styles** para indicar que use la librería de **Bootstrap**
+
+        ```
+        "styles": [
+              "src/styles.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css"
+            ]
+        ```
+    * Para que entren en acción los cambios necesitamos dar de baja y volverlo a arrancar el servidor, una vez hecho esto vemos que ya toma los estilos css de **Bootstrap** sin necesidad de meter nada en nuestro archivo **index.html**, esta instalado de manera general.
+    
+     * En **angular.json** vamos a modificar los **scripts** para indicar que use la librería **js** de **Jquery**, **Pooper** y **Bootstrap**, la que tiene más dependencias generalmente va al final.
+
+        ```
+        "scripts": [
+              "node_modules/jquery/dist/jquery.slim.min.js",
+              "node_modules/popper.js/dist/umd/popper.min.js",
+              "node_modules/bootstrap/dist/js/bootstrap.min.js"
+            ]
+        ```
+
+        Intalar así las librerías tiene la desventaja que todas estas librerías son parte del proyecto y hacen que pese un poco más, pero la ventaja que se pueden usar globalmente.
+
+    * Damos nuevamente de baja el servidor y lo volvemos a cargar para que tome los cambios.
 
 ## Configurando el navbar y otros componentes
 
