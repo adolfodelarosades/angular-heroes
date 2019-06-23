@@ -337,6 +337,7 @@ Vamos a instalar Bootstrap de 3 formas diferentes, esto será aplicable a cualqu
         UPDATE src/app/app.module.ts (588 bytes)
 
         ng g c components/heroes -is --skipTests
+        
         CREATE src/app/components/heroes/heroes.component.html (25 bytes)
         CREATE src/app/components/heroes/heroes.component.ts (242 bytes)
         UPDATE src/app/app.module.ts (681 bytes)
