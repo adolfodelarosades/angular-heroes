@@ -312,7 +312,7 @@ Vamos a instalar Bootstrap de 3 formas diferentes, esto será aplicable a cualqu
 
 ## Configurando la home
 
-   * En la documentación de **Bootstrap** buscamos **Jumbotron** copiamos el **Fluid jumbotron** y lo copiamos en **home.component.html**
+   * En la documentación de **Bootstrap** buscamos **Jumbotron** copiamos el **Fluid jumbotron** y lo copiamos en **home.component.html**, lo personalizamos:
 
         ```
         <div class="jumbotron jumbotron-fluid">
@@ -323,7 +323,7 @@ Vamos a instalar Bootstrap de 3 formas diferentes, esto será aplicable a cualqu
         </div>
         ```
 
-    * No podremos ver aun la página hasta que implementemos las rutas.
+   * No podremos ver aun la página hasta que implementemos las rutas.
 
 ## Rutas en Angular
 
