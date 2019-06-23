@@ -312,6 +312,19 @@ Vamos a instalar Bootstrap de 3 formas diferentes, esto será aplicable a cualqu
 
 ## Configurando la home
 
+   * En la documentación de **Bootstrap** buscamos **Jumbotron** copiamos el **Fluid jumbotron** y lo copiamos en **home.component.html**
+
+        ```
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <h1 class="display-4">Comic App</h1>
+                <p class="lead">Esta es una aplicación de comics.</p>
+            </div>
+        </div>
+        ```
+
+    * No podremos ver aun la página hasta que implementemos las rutas.
+
 ## Rutas en Angular
 
 ## RouterLink y RouterLinkActive - Completando las rutas
