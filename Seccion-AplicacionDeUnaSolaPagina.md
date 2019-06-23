@@ -243,7 +243,74 @@ Vamos a instalar Bootstrap de 3 formas diferentes, esto será aplicable a cualqu
 
     * Damos nuevamente de baja el servidor y lo volvemos a cargar para que tome los cambios.
 
-## Configurando el navbar y otros componentes
+## Configurando el navbar
+
+   * De los recursos descargados copiamos todas las imágenes en **assets/img**
+
+   * De los recursos descargados copiamos el **favicon** y lo reemplazamos por el existente en nuestro proyecto. Si recargamos la página se puede ver el nuevo favicon.
+
+    * **NOTA** Cuando tenemos las herramientas de desarrollar abiertas, podemos dar clic derecho en el simbolo de recarga y nos saldrán las siguientes opciones:
+
+        * Volver a cargar normalmente
+        * Volver a cargar de forma forzada
+        * Vaciar la caché y volver a cargar de forma forzada
+
+        Estas opciones sirven para forzar la recarga.
+
+    * Vamos a implementar nuestro componente **navabar.component.html**, vamos a copiar de la documentación Bootstrap la primer **navbar** que aparece en la documentación.
+
+    * Para meter un logo en nuestra barra, la documentación de Bootstrap nos ayuda:
+
+        ```
+        <!-- Just an image -->
+        <nav class="navbar navbar-light bg-light">
+            <a class="navbar-brand" href="#">
+                <img src="/docs/4.3/assets/brand/bootstrap-solid.svg" width="30" height="30" alt="">
+            </a>
+        </nav>
+        ``` 
+
+    * Nuestro **navabar.component.html** queda así:
+
+        ```
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">
+                <img src="assets/img/A-64.png" width="30" height="30" alt="">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form>
+            </div>
+        </nav>
+        ```
+
+    * Aun no vemos nada en nuestra página vamos a **app.component.html** y ponemos:
+
+        ```
+        <app-navbar></app-navbar>  
+        ```
+
+    * Para que la barra de navegación salga oscura se pone:
+
+        `navbar-dark bg-dark`
+
+    * Si cargamos la página ya podemos apreciar nuestra barra de navegación
+
+## Configurando la home
 
 ## Rutas en Angular
 
@@ -263,13 +330,13 @@ Vamos a instalar Bootstrap de 3 formas diferentes, esto será aplicable a cualqu
 
 ## Tarea práctica #1 - Componente del héroe
 
-## Resolución de la tarea práctica #1 - Componente del héroe
+## Resolución de la tarea práctica 1 - Componente del héroe
 
 ## Pipes: Transformación visual de la data.
 
 ## Buscador de Héroes
 
-## Tarea práctica #2: Crear la pantalla de búsqueda de héroes.
+## Tarea práctica 2: Crear la pantalla de búsqueda de héroes.
 
 ## Resolución de la tarea 2 - Buscador de Héroes
 
