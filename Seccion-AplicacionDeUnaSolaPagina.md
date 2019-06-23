@@ -249,7 +249,7 @@ Vamos a instalar Bootstrap de 3 formas diferentes, esto será aplicable a cualqu
 
    * De los recursos descargados copiamos el **favicon** y lo reemplazamos por el existente en nuestro proyecto. Si recargamos la página se puede ver el nuevo favicon.
 
-    * **NOTA** Cuando tenemos las herramientas de desarrollar abiertas, podemos dar clic derecho en el simbolo de recarga y nos saldrán las siguientes opciones:
+   * **NOTA** Cuando tenemos las herramientas de desarrollar abiertas, podemos dar clic derecho en el simbolo de recarga y nos saldrán las siguientes opciones:
 
         * Volver a cargar normalmente
         * Volver a cargar de forma forzada
@@ -257,9 +257,9 @@ Vamos a instalar Bootstrap de 3 formas diferentes, esto será aplicable a cualqu
 
         Estas opciones sirven para forzar la recarga.
 
-    * Vamos a implementar nuestro componente **navabar.component.html**, vamos a copiar de la documentación Bootstrap la primer **navbar** que aparece en la documentación.
+   * Vamos a implementar nuestro componente **navabar.component.html**, vamos a copiar de la documentación Bootstrap la primer **navbar** que aparece en la documentación.
 
-    * Para meter un logo en nuestra barra, la documentación de Bootstrap nos ayuda:
+   * Para meter un logo en nuestra barra, la documentación de Bootstrap nos ayuda:
 
         ```
         <!-- Just an image -->
@@ -270,7 +270,7 @@ Vamos a instalar Bootstrap de 3 formas diferentes, esto será aplicable a cualqu
         </nav>
         ``` 
 
-    * Nuestro **navabar.component.html** queda así:
+   * Nuestro **navabar.component.html** queda así:
 
         ```
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -298,17 +298,17 @@ Vamos a instalar Bootstrap de 3 formas diferentes, esto será aplicable a cualqu
         </nav>
         ```
 
-    * Aun no vemos nada en nuestra página vamos a **app.component.html** y ponemos:
+   * Aun no vemos nada en nuestra página vamos a **app.component.html** y ponemos:
 
         ```
         <app-navbar></app-navbar>  
         ```
 
-    * Para que la barra de navegación salga oscura se pone:
+   * Para que la barra de navegación salga oscura se pone:
 
         `navbar-dark bg-dark`
 
-    * Si cargamos la página ya podemos apreciar nuestra barra de navegación
+   * Si cargamos la página ya podemos apreciar nuestra barra de navegación
 
 ## Configurando la home
 
