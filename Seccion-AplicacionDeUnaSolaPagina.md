@@ -52,7 +52,7 @@
 
     `git push --tags`
 
-## Creando la estructura de nuestro proyecto
+## Creando la estructura de nuestro proyecto (Componentes navbar y home)
 
 * En la carpeta **app** vamos a crear la carpeta **components** y dentro otra carpeta llamada **shared**
 
