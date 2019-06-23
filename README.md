@@ -35,6 +35,7 @@
 ### Tarea práctica #1 - Componente del héroe
 
 ### Resolución de la tarea práctica #1 - Componente del héroe
+
 ### Pipes: Transformación visual de la data.
 
 ### Buscador de Héroes
