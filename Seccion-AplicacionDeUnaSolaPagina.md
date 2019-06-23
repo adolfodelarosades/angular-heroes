@@ -106,7 +106,7 @@
 
     Al cargar nuevamente la página ya no marca ningún error.
 
-## Instalando el bootstrap cuando usamos el Angular-CLI
+## Instalando el Bootstrap
 
 Vamos a instalar Bootstrap de 3 formas diferentes, esto será aplicable a cualquier otra librería.
 
