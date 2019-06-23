@@ -1,27 +1,55 @@
-# Heroes
+# Aplicación 2: Aplicación de una sola página (SPA)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.3.
+## Contenido
 
-## Development server
+### Introducción a la sección
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+### ¿Qué veremos en esta sección? 							
 
-## Code scaffolding
+### Demostración de lo que lograremos en esta sección
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Iniciar el proyecto - SPA
 
-## Build
+### Creando la estructura de nuestro proyecto
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+### Instalando el bootstrap cuando usamos el Angular-CLI
 
-## Running unit tests
+### Configurando el navbar y otros componentes
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### Rutas en Angular
 
-## Running end-to-end tests
+### RouterLink y RouterLinkActive - Completando las rutas
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+### Componente Heroes - diseño
 
-## Further help
+### Introducción a los Servicios
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+### Creando nuestro primer servicio - HeroesService
+
+### Página de Heroes - Diseño con *ngFor
+
+### Rutas con parametros - Router
+
+### Recibiendo parámetros por URL – ActivatedRoute
+
+### Tarea práctica #1 - Componente del héroe
+
+### Resolución de la tarea práctica #1 - Componente del héroe
+### Pipes: Transformación visual de la data.
+
+### Buscador de Héroes
+
+### Tarea práctica #2: Crear la pantalla de búsqueda de héroes.
+
+### Resolución de la tarea 2 - Buscador de Héroes
+
+### Plus: Mostrando un mensaje cuando no hay resultados.
+
+### @Input - Recibir información de un componente padre a un hijo
+
+### @Output - Emitir un evento del hijo hacia el padre
+
+### Arreglar detalles de la búsqueda
+
+### Código fuente de la sección
+
