@@ -54,6 +54,58 @@
 
 ## Creando la estructura de nuestro proyecto
 
+* En la carpeta **app** vamos a crear la carpeta **components** y dentro otra carpeta llamada **shared**
+
+* Vamos a crear nuestro componente **navbar**, nuestra barra de navegación.
+
+    `ng g c components/shared/navbar`
+
+    ```
+    CREATE src/app/components/shared/navbar/navbar.component.html (25 bytes)
+    CREATE src/app/components/shared/navbar/navbar.component.spec.ts (628 bytes)
+    CREATE src/app/components/shared/navbar/navbar.component.ts (269 bytes)
+    CREATE src/app/components/shared/navbar/navbar.component.css (0 bytes)
+    UPDATE src/app/app.module.ts (414 bytes)
+    ```
+
+    Nos crea 4 archivos, pero realmente no vamos a usar ni el **spec.ts** ni el **.css**, los eliminamos.
+
+    En el archivo **.ts** hace la referencia al archivo **.css**
+
+    `styleUrls: ['./navbar.component.css']`
+
+    que eliminamos porque ya no tenemos ese archivo.
+
+* Vamos a crear nuestro componente **home**, nuestra página home.
+
+    `ng g c components/shared/home`
+
+    Eliminamos **spec.ts** y **.css**, en el archivo **.ts** eliminamos la referencia al archivo **.css**
+
+    Y es aquí cuando me doy cuenta que **home** no debería estar en la carpeta **shared**, debería estar en la carpeta **components** ¿Cómo arreglo esto?.
+
+    Podemos arrastrar la carpeta **home** de **shared** a **components**
+
+    Después de hacer lo anterior y cargar la página me muestra el error:
+
+    `Cannot GET /`
+
+    Si veo la consola de la terminal me marca el error:
+
+    `ERROR in src/app/app.module.ts(6,31): error TS2307: Cannot find module './ components/shared/home/home.component'. `
+
+    Voy a **app.module.ts** y veo el fallo:
+
+    `import { HomeComponent } from './components/shared/home/home.component';`
+
+    ya no se encuentra en esa ubicación, elimino **/shared** 
+
+    `import { HomeComponent } from './components/home/home.component';`
+
+    Todo bien ahora, esto lo tendremos que hacer si movemos un componente de una carpeta a otra, pero si lo eliminamos debemos eliminar la referencia al componente en **app.module.ts**.
+
+    Al cargar nuevamente la página ya no marca ningún error.
+
 ## Instalando el bootstrap cuando usamos el Angular-CLI
 
 ## Configurando el navbar y otros componentes
