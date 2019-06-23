@@ -141,6 +141,42 @@ Vamos a instalar Bootstrap de 3 formas diferentes, esto será aplicable a cualqu
         </html>
         ```
 
+2. Descargando las librerías en nuestro proyecto local.
+
+    * Ir a **getbootstrap.com**
+
+    * Ir a Download
+
+    * Presionar el botón **Download** para descargar la librería **bootstrap-4.3.1.zip**
+
+    * Descomprimir el archivo **.zip**
+
+    * Copiamos la carpeta **dist**
+
+    * En la carpeta **assets** de nuestro proyecto creamos la carpeta **libs** y allí pegamos la carpeta **dist**
+
+    * Renombramos **dist** por **bootstrap**
+
+    * En el archivo **index.html** en lugar de hacer referencia al CDM haremos referencia a la librería descargada localmente, lo haremos solo para el archivo **.css** pero se podría hacer también para los **.js**, tendríamos que descargarnos **jquery** y **popper**. Nuestro archivo **index.html** queda así:
+
+        ```
+        <!doctype html>
+        <html lang="en">
+            <head>
+                <meta charset="utf-8">
+                <title>Heroes</title>
+                <base href="/">
+
+                <meta name="viewport" content="width=device-width, initial-scale=1">
+                <link rel="icon" type="image/x-icon" href="favicon.ico">
+                <link rel="stylesheet" href="assets/libs/bootstrap/css/bootstrap.min.css">
+            </head>
+            <body>
+                <app-root></app-root>    
+            </body>
+        </html>
+        ```
+
 ## Configurando el navbar y otros componentes
 
 ## Rutas en Angular
