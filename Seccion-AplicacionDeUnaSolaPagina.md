@@ -337,13 +337,74 @@ Vamos a instalar Bootstrap de 3 formas diferentes, esto será aplicable a cualqu
         UPDATE src/app/app.module.ts (588 bytes)
 
         ng g c components/heroes -is --skipTests
-        
+
         CREATE src/app/components/heroes/heroes.component.html (25 bytes)
         CREATE src/app/components/heroes/heroes.component.ts (242 bytes)
         UPDATE src/app/app.module.ts (681 bytes)
         ```
 
-## Rutas en Angular
+## Rutas en Angular (app.routes.ts)
+
+   * En la carpeta **app** vamos a crear el archivo **app.routes.ts**
+
+   * Usamos el snippet **ng-router** y nos mete un código similar al que necesitamos, hacemos ciertos ajustes para que quede así:
+
+        ```
+        import { Routes, RouterModule } from '@angular/router';
+        import { HomeComponent } from './components/home/home.component';
+
+        const APP_ROUTES: Routes = [
+            { path: 'home', component: HomeComponent },
+            { path: '**', pathMatch: 'full', redirectTo: 'home' }
+        ];
+
+        export const APP_ROUTING = RouterModule.forRoot(APP_ROUTES);
+        ```
+
+        Por ahora solo cuenta con una ruta hacia el componente **home**
+
+
+   * Para poder usar las rutas necesitamos importarlas en el archivo **app.module.ts**
+
+        ```
+        import { APP_ROUTING } from './app.routes';
+        ....
+        imports: [
+            BrowserModule,
+            APP_ROUTING
+        ],
+        ```
+
+   * Si cargamos la página aun no vemos el componente **home**, nos falta decirlde donde debe renderizar ese componente usando **router-outlet**. Eso lo vamos a hacer en el archivo **app.component.ts** 
+
+        ```
+        <app-navbar></app-navbar>
+        <div class="container">
+            <router-outlet></router-outlet>
+        </div>
+        ```
+
+        Al cargar la página ya podemos ver el componente **home** renderizado.
+
+   * Existe una forma de usar las rutas usando el numeral **#** el cual nos ayuda cuando se pasan parámetros por que hay casos que cuando no se usa se pierden las referencias por eso su utilidad. Para forzar que se use se debe colocar en **app.routes.ts useHash** 
+
+        `export const APP_ROUTING = RouterModule.forRoot(APP_ROUTES, { useHash: true});`
+
+   * De esta manera el URL que se tiene es:
+
+        `http://localhost:4200/#/home`
+    
+   * Por ahora vamos a quitar el uso del **hash** para ver más adelante los posibles errores y ver como poder resolverlos.
+
+        `export const APP_ROUTING = RouterModule.forRoot(APP_ROUTES);`
+
+   * Otra consideración importante es que si no usamos el **hash** en la rutas es necesario que en el archivo **index.html** tengamos la línea:
+
+        `<base href="/">`
+
+   * Si no la tenemos nos marcara el siguiente error:
+
+        `Error: No base href set. Please provide a value for the APP_BASE_HREF token or add a base element to the document.`
 
 ## RouterLink y RouterLinkActive - Completando las rutas
 
