@@ -325,6 +325,23 @@ Vamos a instalar Bootstrap de 3 formas diferentes, esto será aplicable a cualqu
 
    * No podremos ver aun la página hasta que implementemos las rutas.
 
+## Creación componentes about y heroes
+
+   * Vamos a crear los componentes **about** y **heroes** sin **css** ni **test**
+    
+        ```
+        ng g c components/about -is --skipTests
+        
+        CREATE src/app/components/about/about.component.html (24 bytes)
+        CREATE src/app/components/about/about.component.ts (239 bytes)
+        UPDATE src/app/app.module.ts (588 bytes)
+
+        ng g c components/heroes -is --skipTests
+        CREATE src/app/components/heroes/heroes.component.html (25 bytes)
+        CREATE src/app/components/heroes/heroes.component.ts (242 bytes)
+        UPDATE src/app/app.module.ts (681 bytes)
+        ```
+
 ## Rutas en Angular
 
 ## RouterLink y RouterLinkActive - Completando las rutas
